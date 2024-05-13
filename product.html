@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product - Smart Grocery Store</title>
+    <link rel="stylesheet" href="product.css"> <!-- Link to external CSS file -->
+</head>
+<body>
+    <header>
+		<nav>
+			<a href="index.html">Home</a>
+			
+            <a href="product.html">Seller</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="index1.html">Contact</a>
+            <a href="cart.html">Cart</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="signin.html">Sign In</a>	
+           
+		</nav>
+    </header>
+    <div class="container">
+        <h1>Add Product</h1>
+        <form id="productForm" method="POST" action="">
+            <div class="form-group">
+                <label for="productName">Product Name</label>
+                <input type="text" id="productName" name="productName" required>
+            </div>
+            <div class="form-group">
+                <label for="productDescription">Product Description</label>
+                <textarea id="productDescription" name="productDescription" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="productPrice">Product Price</label>
+                <input type="number" id="productPrice" name="productPrice" min="0" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="productImage">Product Image</label>
+                <input type="file" id="productImage" name="productImage" accept="image/*" required>
+            </div>
+            <div class="form-group">
+                <label for="orderID">Order ID</label>
+                <input type="text" id="orderID" name="orderID" required>
+            </div>
+            <div class="form-group">
+                <a href="pr.html" class="btn-add-product">ADD PRODUCT</a> <!-- Changed to anchor tag -->
+            </div>
+        </form>
+    </div>
+</body>
+</html>

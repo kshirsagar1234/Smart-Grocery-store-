@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+  <header>
+		<nav>
+			<a href="index.html">Home</a>
+			
+            <a href="product.html">Seller</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="index1.html">Contact</a>
+            <a href="cart.html">Cart</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="signin.html">Sign In</a>	
+           
+		</nav>
+    </header>
+  <div class="container">
+    <h1>Contact Us</h1>
+    <p>Have a question, suggestion, or just want to say hi? Fill out the form below to get in touch with us.</p>
+    <form action="submit_contact_form.php" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>

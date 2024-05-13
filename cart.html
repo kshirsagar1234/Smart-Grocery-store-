@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Grocery Store</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+    }
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 0 20px;
+    }
+    .product-list {
+        list-style-type: none;
+        padding: 0;
+    }
+    .product-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 5px;
+    }
+    .product-name {
+        flex: 1;
+    }
+    .product-price {
+        margin-left: 20px;
+    }
+    .product-image {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+    }
+    .add-to-cart {
+        background-color: #4CAF50;
+        color: white;
+        padding: 5px 10px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    .add-to-cart:hover {
+        background-color: #45a049;
+    }
+    .cart {
+        margin-top: 20px;
+        border: 1px solid #ccc;
+        padding: 10px;
+    }
+    .cart-item {
+        margin-bottom: 5px;
+    }
+    .total {
+        font-weight: bold;
+        margin-top: 10px;
+    }
+    .checkout-btn {
+        margin-top: 10px;
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    .checkout-btn:hover {
+        background-color: #45a049;
+    }
+
+    
+nav {
+    text-align: center;
+    background-color: #333;
+    padding: 10px 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+</style>
+</head>
+<body>
+    <header>
+		<nav>
+			<a href="index.html">Home</a>
+			
+            <a href="product.html">Seller</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="index1.html">Contact</a>
+            <a href="cart.html">Cart</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="signin.html">Sign In</a>	
+           
+		</nav>
+    </header>
+    <header>
+        <h1>Smart Grocery Store</h1>
+    </header>
+    <div class="container">
+        <h2>Available Products</h2>
+        <ul class="product-list">
+            <li class="product-item">
+                <img src="images\apple.png" alt="Apples" class="product-image">
+                <span class="product-name">Apples</span>
+                <span class="product-price">₹180.00/kg</span>
+                <button class="add-to-cart" onclick="addToCart('Apples', 180.00)">Add</button>
+            </li>
+            <li class="product-item">
+                <img src="images\bananas-311788_1920.png" alt="Bananas" class="product-image">
+                <span class="product-name">Bananas</span>
+                <span class="product-price">₹50.00</span>
+                <button class="add-to-cart" onclick="addToCart('Bananas', 50.00)">Add</button>
+            </li>
+            <!-- Add more products as needed -->
+        </ul>
+        <div class="cart">
+            <h2>Shopping Cart</h2>
+            <ul id="shopping-cart">
+            </ul>
+            <button class="checkout-btn" onclick="viewTotal()">View Total</button>
+            <a href="#" class="checkout-btn" id="checkout-btn">Checkout</a>
+            <div class="total" id="cart-total" style="display: none;"></div>
+        </div>
+    </div>
+
+    <script>
+        let cartTotal = 0;
+
+        function addToCart(product, price) {
+            const cart = document.getElementById("shopping-cart");
+            const listItem = document.createElement("li");
+            listItem.classList.add("cart-item");
+            listItem.textContent = `${product} - ₹${price.toFixed(2)}`;
+            cart.appendChild(listItem);
+            
+            cartTotal += price;
+            document.getElementById("cart-total").textContent = `Total: ₹${cartTotal.toFixed(2)}`;
+        }
+
+        function viewTotal() {
+            const totalElement = document.getElementById("cart-total");
+            totalElement.style.display = "block";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Grocery Store</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            background-image: url('images/banner2.jpg'); /* Add your background image URL here */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.7); /* Added background color with opacity */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #2691d9;
+        }
+
+        .form-group .btn-register {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #2691d9;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+        }
+
+        .form-group .btn-register:hover {
+            background-color: #1e7dc4;
+        }
+
+        .form-group .login-link {
+            text-align: center;
+            margin-top: 15px;
+            color: #666;
+        }
+
+        .form-group .login-link a {
+            color: #2691d9;
+            text-decoration: none;
+        }
+
+        .form-group .login-link a:hover {
+            text-decoration: underline;
+        }
+
+        nav {
+    text-align: center;
+    background-color: #333;
+    padding: 10px 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+        
+    </style>
+</head>
+<body>
+    <header>
+		<nav>
+			<a href="index.html">Home</a>
+			
+            <a href="product.html">Seller</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="index1.html">Contact</a>
+            <a href="cart.html">Cart</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="signin.html">Sign In</a>	
+           
+		</nav>
+    </header>
+    <div class="container">
+        <h1>Register</h1>
+        <form id="registerForm" method="POST" action="">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+            </div>
+            <div class="form-group">
+                <a href="signin.html" class="btn-register">Register</a> <!-- Changed to anchor tag -->
+            </div>
+            <div class="form-group login-link">
+                Already have an account? <a href="signin.html">Sign In</a>
+            </div>
+        </form>
+    </div>
+ 
+</body>
+</html>
+
